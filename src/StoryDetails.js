@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Text } from "react-native";
-import JSONPretty from 'react-json-pretty';
 
 export default class StoryDetails extends Component {
 
@@ -11,7 +10,7 @@ export default class StoryDetails extends Component {
 
     render() {
         return (
-            <JSONPretty id="json-pretty" data={this.props.route.params.storyDetails}></JSONPretty>
+            <Text style={{padding: 20}}>{JSON.stringify(this.props.route.params.storyDetails)}</Text>
         )
 
     }
